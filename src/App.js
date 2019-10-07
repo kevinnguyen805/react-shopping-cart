@@ -23,9 +23,14 @@ function App() {
 		setCart([...cart, item])
 	};
 
+	// stretch
+	const removeItem = shopItem => {
+		setCart(cart.filter(item => item.id !== shopItem.id))
+	}
+
 	return (
 		<div className="App">
-			<CartContext.Provider value={cart} >
+			<CartContext.Provider value={{cart, removeItem}} >
 			<Navigation cart={cart} />
 
 			{/* Routes */}
@@ -60,6 +65,9 @@ App.js
 
 Goal: refactor application to use context API to make data more efficient
 
-1. Add item functionality - function called addItem => finish writing logic 
+Stretch (?)
+- create a 'removeItem' function that allows you to remove an item from your cart with a click of a button
+	- 'removeItem' should be able to be consumed from your ShoppingCartItem component
+	- Each item has an ID for removeItem!
 
 */
