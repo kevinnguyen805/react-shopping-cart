@@ -40,3 +40,19 @@ function App() {
 }
 
 export default App;
+
+
+/* 
+2 state properties 
+- products => keep track of available products
+- cart => keep track of items in cart 
+
+App.js
+- contains 3 components => nav + route + route 
+- each component being passed either CART state or PRODUCT state as props 
+
+Goal: refactor application to use context API to make data more efficient
+
+1. Add item functionality - function called addItem => finish writing logic 
+
+*/
